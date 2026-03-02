@@ -57,13 +57,28 @@ namespace BiblioFusionWithTabs.Controls
         {
             var options = new ToolStripMenuItem("Options");
 
-            var ajoutAdherant = new ToolStripMenuItem("Ajouter un Adhérant");
-            var supprAdherant = new ToolStripMenuItem("Supprimer un Adhérant");
+            var livreJouetMenu = new ToolStripMenuItem("Géstionnaire de Livres / Jouets");
             var ajoutLivreJouet = new ToolStripMenuItem("Ajouter un Livre / Jouet");
             var supprLivreJouet = new ToolStripMenuItem("Supprimer un Livre / Jouet");
+
+            var categorieMenu = new ToolStripMenuItem("Géstionnaire de Catégories");
+            var ajoutCategorie = new ToolStripMenuItem("Ajouter une Catégorie");
+            var supprCategorie = new ToolStripMenuItem("Supprimer une Catégorie");
+
+            var adherantMenu = new ToolStripMenuItem("Géstionnaire d'Adhérants");
+            var ajoutAdherant = new ToolStripMenuItem("Ajouter un Adhérant");
+            var supprAdherant = new ToolStripMenuItem("Supprimer un Adhérant");
+
+            var adminMenu = new ToolStripMenuItem("Géstionnaire d'Administateurs");
             var ajoutAdmin = new ToolStripMenuItem("Ajouter un Administateur");
             var supprAdmin = new ToolStripMenuItem("Supprimer un Administateur");
-            options.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutAdherant, supprAdherant, ajoutLivreJouet, supprLivreJouet, ajoutAdmin, supprAdmin });
+            var gestionAdmin = new ToolStripMenuItem("Gérer les comptes Administrateurs existants");
+
+            livreJouetMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutLivreJouet, supprLivreJouet });
+            categorieMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutCategorie, supprCategorie });
+            adherantMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutAdherant, supprAdherant });
+            adminMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutAdmin, supprAdmin, gestionAdmin });
+            options.DropDownItems.AddRange(new ToolStripMenuItem[] { livreJouetMenu, categorieMenu, adherantMenu, adminMenu });
 
             Items.Add(options);
         }
