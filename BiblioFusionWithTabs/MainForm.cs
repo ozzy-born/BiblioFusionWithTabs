@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BiblioFusionWithTabs.Controls;
+using WindowsFormsApp1;
 
 namespace BiblioFusionWithTabs
 {
@@ -16,7 +17,8 @@ namespace BiblioFusionWithTabs
         public MainForm()
         {
             InitializeComponent();
-            MessageBox.Show("Bienvenue");
+            ConnexionForm formConnexion = new ConnexionForm();
+            formConnexion.Show();
             var mainMenuStrip = new MainMenustrip();
             var mainTabControl = new MainTabControl();
             mainTabControl.TabPages.AddRange(new TabPage[] { new TabPage("Tableau De Bord"), new TabPage("Rechercher"), new TabPage("Scanner"), new TabPage("Statistiques") });

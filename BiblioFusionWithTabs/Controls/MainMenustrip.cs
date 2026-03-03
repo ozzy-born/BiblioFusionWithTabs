@@ -19,6 +19,8 @@ namespace BiblioFusionWithTabs.Controls
             LogOut();
         }
 
+        //Ancien MenuStrip
+        /*
         public void TableauDeBord()
         {
             var tabDeBord = new ToolStripMenuItem("Tableau De Bord");
@@ -52,7 +54,7 @@ namespace BiblioFusionWithTabs.Controls
         {
             var statistiques = new ToolStripMenuItem("Statistiques");
             Items.Add(statistiques);
-        }
+        }*/
         public void OptionsMenu()
         {
             var options = new ToolStripMenuItem("Options");
@@ -78,6 +80,7 @@ namespace BiblioFusionWithTabs.Controls
             categorieMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutCategorie, supprCategorie });
             adherantMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutAdherant, supprAdherant });
             adminMenu.DropDownItems.AddRange(new ToolStripMenuItem[] { ajoutAdmin, supprAdmin, gestionAdmin });
+
             options.DropDownItems.AddRange(new ToolStripMenuItem[] { livreJouetMenu, categorieMenu, adherantMenu, adminMenu });
 
             Items.Add(options);
